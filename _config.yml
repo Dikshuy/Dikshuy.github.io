@@ -24,10 +24,10 @@ author:
   avatar           : "DP.png"
   name             : "Dikshant"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "masters student"
   location         : "Edmonton"
   employer         : "University of Alberta"
-  uri              : https://www.ualberta.ca/en/index.html
+  uri              : https://dikshuy.github.io
   email            : "ddikshan@ualberta.ca" 
 
   # Academic websites
@@ -75,8 +75,8 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
+  # books:
+  #   title: 'Books'
   # manuscripts:
   #   title: 'Journal Articles'    
   conferences:
