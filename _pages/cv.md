@@ -59,7 +59,7 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul> -->
   
-Service and leadership
+Mentoring
 ======
 * Team Leader, SeDriCa: Led a 26-member team at IIT Bombay in the International Ground Vehicle Competition, managing technical strategy, operations, and funding
 * Technical Head, Inter-IIT Tech Meet 9.0: Led and mentored a 50-member contingent across 10 high-complexity projects, providing technical guidance and feedback
