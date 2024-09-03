@@ -7,15 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-I am Dikshant, blah blah blah
+I am Dikshant! wanna know more?
 
 Timeline
 ======
-wanna know more?
 
 2024
 ------
-abc
 
 2023
 ------
