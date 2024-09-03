@@ -1,16 +1,16 @@
-<!-- ---
-title: "Teaching experience 2"
+---
+title: "Teaching Assistant"
 collection: teaching
-type: "Workshop"
+type: "Undergraduate course"
 permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+venue: "Indian Institute of Technology Bombay, Department of Mathematics"
+date: 2022-03-01
+location: "Mumbai, India"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+Differential Equations - MA108 (Spring 2022)
 
-Heading 1
+<!-- Heading 1
 ======
 
 Heading 2
