@@ -7,11 +7,29 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<!-- {% include base_path %} -->
+
+You can view and download my resume from the preview below or open it in full-screen [here](/files/resume.pdf).
+
+Last updated Dec 31, 2024
 
 
+<style>
+.parent-container {
+	display: flex;
+	width: 100%;
+	height: calc(100vh);
+ }
+.child-container {
+	flex: 1;
+	margin: 0px;
+}
+</style>
+<div class="parent-container">
+	<iframe src="/files/resume.pdf" frameborder="0" allowfullscreen class="child-container"></iframe>
+</div>
 
-Education
+<!-- Education
 ======
 * M.S. in Computer Science, University of Alberta, Present
 * B.Tech. in Civil Engineering with Minors in Electrical Engineering, Indian Institute of Technology Bombay, 2022
@@ -39,7 +57,7 @@ Side quests
 
 * Intelligent Picking Robot: Simulated a robotic arm for warehouse automation, integrating object detection and path planning.
 * Terrace Farming Bot: Developed an autonomous robot for terrace farming, utilizing advanced control and state estimation techniques
-* Room Service Automation Bot: Created an autonomous robot for hotel room service, implementing SLAM and efficient navigation algorithms
+* Room Service Automation Bot: Created an autonomous robot for hotel room service, implementing SLAM and efficient navigation algorithms -->
 
 <!-- Publications
 ======
@@ -59,7 +77,7 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul> -->
   
-Mentoring
+<!-- Mentoring
 ======
 * Team Leader, SeDriCa: Led a 26-member team at IIT Bombay in the International Ground Vehicle Competition, managing technical strategy, operations, and funding
 * Technical Head, Inter-IIT Tech Meet 9.0: Led and mentored a 50-member contingent across 10 high-complexity projects, providing technical guidance and feedback
@@ -67,4 +85,4 @@ Mentoring
 
 ---------------------------------
 
-For more in-depth details, click on this [link](https://drive.google.com/file/d/1Ujqy8EynC8ewCOofLBOEVfjH79bW3xhb/view?usp=sharing)
+For more in-depth details, click on this [link](https://drive.google.com/file/d/1Ujqy8EynC8ewCOofLBOEVfjH79bW3xhb/view?usp=sharing) -->
