@@ -3,7 +3,7 @@ title: "CMPUT 366 - Search Planning in Artificial Intelligence"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/cmput366
-venue: "Levi Lelis <br>Computing Science Department <br>University of Alberta"
+venue: "Instructor: Levi Lelis <br>Computing Science Department <br>University of Alberta"
 date: "2024-09-03"
 disp_date: "Fall 2024"
 ---
