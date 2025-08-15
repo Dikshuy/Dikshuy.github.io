@@ -3,7 +3,7 @@ title: "CMPUT 503 - Experimental Mobile Robotics"
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/cmput503
-venue: "Computing Science Department <br>University of Alberta"
+venue: "Instructor: Matthew Taylor <br>Computing Science Department <br>University of Alberta"
 date: "2025-01-06"
 disp_date: "Winter 2025"
 ---
