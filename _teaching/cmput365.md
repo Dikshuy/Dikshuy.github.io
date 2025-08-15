@@ -3,7 +3,7 @@ title: "CMPUT365: Introduction to Reinforcement Learning"
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/cmput365
-venue: "Computing Science Department <br> University of Alberta <br> Instructor: _Marlos C. Machado_"
+venue: "Instructor: Marlos C. Machado <br> Computing Science Department <br> University of Alberta"
 date: 2025-09-01
 disp_date: "Fall 2025"
 ---
