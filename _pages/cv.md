@@ -11,7 +11,7 @@ redirect_from:
 
 You can view and download my resume from the preview below or open it in full-screen [here](/files/resume.pdf).
 
-Last updated Dec 31, 2024
+Last updated Oct 12, 2025
 
 
 <style>
