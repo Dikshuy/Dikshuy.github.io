@@ -9,7 +9,7 @@ redirect_from:
 
 <!-- {% include base_path %} -->
 
-You can view and download my resume from the preview below or open it in full-screen [here](/files/CV.pdf).
+You can view and download my resume from the preview below or open it in full-screen [here](/files/resume.pdf).
 
 Last updated Oct 12, 2025
 
