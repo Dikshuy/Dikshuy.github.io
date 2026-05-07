@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Master's student in the Computing Science department at the University of Alberta, supervised by [Matt Taylor](https://drmatttaylor.net) and [Marlos C. Machado](https://webdocs.cs.ualberta.ca/~machado/index.html). I completed my bachelor's degree at the Indian Institute of Technology Bombay (IITB) and worked as an AI Researcher at Honda R&D in Japan. My research focuses on planning aspect with the Laplacian Representation. Inspired from my supervisors, I fully believe that Laplacian Representation holds a key to solve many problems in RL. 
+I am a PhD student in the Computing Science department at the University of Alberta, supervised by [Marlos C. Machado](https://webdocs.cs.ualberta.ca/~machado/index.html). I completed my Master's at the University of Alberta, where I was co-supervised by [Matt Taylor](https://drmatttaylor.net) and Marlos. I completed my bachelor's degree at the Indian Institute of Technology Bombay (IITB) and worked as an AI Researcher at Honda R&D in Japan. My current research focuses on planning aspect with the Laplacian Representation. Inspired from Marlos, I fully believe that Laplacian Representation holds a key to solve many problems in RL.
 
 In general, I'm passionate about: (_Deep_) _Reinforcement Learning_, _Representation Learning_, _Continual Learning_, _Autonomous Driving_, and _Robotics_.
 
