@@ -5,32 +5,257 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<div class="pub-list">
+  {% if site.publication_category %}
+    {% for category in site.publication_category %}
+      {% assign title_shown = false %}
+      {% for post in site.publications reversed %}
+        {% if post.category != category[0] %}{% continue %}{% endif %}
+        {% unless title_shown %}
+          {% assign title_shown = true %}
+        {% endunless %}
+
+        <div class="pub-card">
+          <div class="pub-title">{{ post.title }}</div>
+
+          {% if post.authors %}
+            <div class="pub-authors">{{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+          {% endif %}
+
+          {% if post.venue %}
+            <div class="pub-venue">
+              <span class="pub-venue-badge">{{ post.venue }}, {{ post.date | date: "%Y" }}</span>
+            </div>
+          {% elsif post.category == "preprints" %}
+            <div class="pub-venue">
+              <span class="pub-venue-badge pub-venue-preprint">Preprint, {{ post.date | date: "%Y" }}</span>
+            </div>
+          {% endif %}
+
+          {% if post.excerpt and post.excerpt != "" %}
+            <div class="pub-abstract">{{ post.excerpt }}</div>
+          {% endif %}
+
+          <div class="pub-links">
+            {% if post.title_link %}
+              <a href="{{ post.title_link }}" class="pub-btn" target="_blank">
+                <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Paper
+              </a>
+            {% endif %}
+            {% if post.project_page %}
+              <a href="{{ post.project_page }}" class="pub-btn pub-btn-outline" target="_blank">
+                <i class="fa fa-globe" aria-hidden="true"></i> Project Page
+              </a>
+            {% endif %}
+            {% if post.code %}
+              <a href="{{ post.code }}" class="pub-btn pub-btn-outline" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i> Code
+              </a>
+            {% endif %}
+            {% if post.bibtex %}
+              <button class="pub-btn pub-btn-cite" onclick="copyBibtex(this)">
+                <i class="fa fa-quote-right" aria-hidden="true"></i> Cite
+              </button>
+            {% endif %}
+          </div>
+          {% if post.bibtex %}
+            <pre class="pub-bibtex-data">{{ post.bibtex }}</pre>
+          {% endif %}
+        </div>
+
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  {% else %}
+    {% for post in site.publications reversed %}
+      <div class="pub-card">
+        <div class="pub-title">{{ post.title }}</div>
+        {% if post.authors %}
+          <div class="pub-authors">{{ post.authors }}</div>
+        {% endif %}
+        {% if post.venue %}
+          <div class="pub-venue">
+            <span class="pub-venue-badge">{{ post.venue }}, {{ post.date | date: "%Y" }}</span>
+          </div>
+        {% endif %}
+        <div class="pub-links">
+          {% if post.title_link %}
+            <a href="{{ post.title_link }}" class="pub-btn" target="_blank">
+              <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Paper
+            </a>
+          {% endif %}
+          {% if post.project_page %}
+            <a href="{{ post.project_page }}" class="pub-btn pub-btn-outline" target="_blank">
+              <i class="fa fa-globe" aria-hidden="true"></i> Project Page
+            </a>
+          {% endif %}
+          {% if post.bibtex %}
+            <button class="pub-btn pub-btn-cite" onclick="copyBibtex(this)">
+              <i class="fa fa-quote-right" aria-hidden="true"></i> Cite
+            </button>
+          {% endif %}
+        </div>
+        {% if post.bibtex %}
+          <pre class="pub-bibtex-data">{{ post.bibtex }}</pre>
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
 
 
+<style>
+.pub-scholar-link {
+  margin-bottom: 1.8em;
+  font-size: 0.95em;
+  color: #555;
+}
 
+.pub-list {
+  margin-top: 1em;
+}
+
+.pub-section-heading {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333;
+  margin: 2em 0 0.8em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.pub-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #5577E8;
+  border-radius: 4px;
+  padding: 1.2em 1.4em;
+  margin-bottom: 1.2em;
+  transition: box-shadow 0.2s ease;
+}
+
+.pub-card:hover {
+  box-shadow: 0 2px 12px rgba(65, 105, 225, 0.12);
+}
+
+.pub-title {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+  margin-bottom: 0.35em;
+}
+
+.pub-authors {
+  font-size: 0.88em;
+  color: #555;
+  margin-bottom: 0.5em;
+}
+
+.pub-venue {
+  margin-bottom: 0.7em;
+}
+
+.pub-venue-badge {
+  display: inline-block;
+  background: #eef0fc;
+  color: #3f62d4;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.2em 0.65em;
+  border-radius: 3px;
+  border: 1px solid #c0cbf5;
+}
+
+.pub-venue-preprint {
+  background: #fdf3e7;
+  color: #9a6200;
+  border-color: #f0d9b0;
+}
+
+.pub-abstract {
+  font-size: 0.88em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8em;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  margin-top: 0.65em;
+}
+
+.pub-btn {
+  display: inline-block;
+  font-size: 0.78em;
+  font-weight: 600;
+  padding: 0.3em 0.85em;
+  border-radius: 3px;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  background: #5577E8;
+  color: #fff !important;
+  border: 1px solid #5577E8;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.pub-btn:hover {
+  background: #3f62d4;
+  border-color: #3f62d4;
+  color: #fff !important;
+}
+
+.pub-btn-outline {
+  background: #fff;
+  color: #5577E8 !important;
+  border: 1px solid #5577E8;
+}
+
+.pub-btn-outline:hover {
+  background: #eef0fc;
+  color: #3f62d4 !important;
+  border-color: #3f62d4;
+}
+
+.pub-btn-cite {
+  background: #fff;
+  color: #555 !important;
+  border: 1px solid #bbb;
+}
+
+.pub-btn-cite:hover {
+  background: #f5f5f5;
+  border-color: #888;
+  color: #333 !important;
+}
+
+.pub-bibtex-data {
+  display: none;
+}
+
+</style>
+
+<script>
+function copyBibtex(btn) {
+  var card = btn.closest('.pub-card');
+  var bibtex = card.querySelector('.pub-bibtex-data').textContent;
+  var originalHTML = btn.innerHTML;
+  navigator.clipboard.writeText(bibtex).then(function() {
+    btn.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i> Copied!';
+    btn.style.background = '#40bf72';
+    btn.style.borderColor = '#40bf72';
+    btn.style.color = '#fff';
+    setTimeout(function() {
+      btn.innerHTML = originalHTML;
+      btn.style.background = '';
+      btn.style.borderColor = '';
+      btn.style.color = '';
+    }, 2000);
+  });
+}
+</script>
