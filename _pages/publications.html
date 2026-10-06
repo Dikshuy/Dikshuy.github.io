@@ -17,7 +17,7 @@ author_profile: true
           {% assign title_shown = true %}
         {% endunless %}
 
-        <div class="pub-card">
+        <div class="pub-card{% if post.category == 'preprints' %} pub-card-preprint{% endif %}">
           <div class="pub-title">{{ post.title }}</div>
 
           {% if post.authors %}
@@ -137,6 +137,14 @@ author_profile: true
 
 .pub-card:hover {
   box-shadow: 0 2px 12px rgba(65, 105, 225, 0.12);
+}
+
+.pub-card-preprint {
+  border-left-color: #F2BE6E;
+}
+
+.pub-card-preprint:hover {
+  box-shadow: 0 2px 12px rgba(232, 162, 61, 0.15);
 }
 
 .pub-title {

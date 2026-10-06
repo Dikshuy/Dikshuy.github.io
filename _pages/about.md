@@ -17,7 +17,7 @@ When I am not doing research, I am usually playing soccer or badminton, or out b
 
 ## News
 
-- **July 2026** — Attending ICML in Seoul, South Korea.
+- **July 2026** — Attended ICML in Seoul, South Korea.
 - **May 2026** — Started my PhD in Computing Science at UofA.
 - **May 2026** — Successfully defended my Master's thesis.
 - **Apr 2026** — Paper accepted at ICML 2026: *Laplacian Representations for Decision-Time Planning*
