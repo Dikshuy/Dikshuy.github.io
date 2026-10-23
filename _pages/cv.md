@@ -7,24 +7,33 @@ redirect_from:
   - /resume
 ---
 
-<!-- {% include base_path %} -->
 
-You can view and download my resume from the preview below or open it in full-screen [here](/files/resume.pdf).
-
-Last updated Jun 6, 2026
-
+[Download PDF](/files/dikshant_cv.pdf){: download="dikshant_cv.pdf"} · *Last updated Oct 12, 2026*
 
 <style>
-.parent-container {
+.cv-preview {
 	display: flex;
 	width: 100%;
-	height: calc(100vh);
- }
-.child-container {
+	height: 100vh;
+}
+.cv-preview iframe {
 	flex: 1;
-	margin: 0px;
+	margin: 0;
+	border: 0;
+}
+.cv-mobile {
+	display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+	.cv-preview {
+		display: none;
+	}
+	.cv-mobile {
+		display: block;
+	}
 }
 </style>
-<div class="parent-container">
-	<iframe src="/files/resume.pdf" frameborder="0" allowfullscreen class="child-container"></iframe>
+<div class="cv-preview">
+	<iframe src="/files/dikshant_cv.pdf" title="CV" allowfullscreen></iframe>
 </div>
+<p class="cv-mobile"><a class="btn" href="/files/dikshant_cv.pdf" target="_blank">View CV (PDF)</a></p>
