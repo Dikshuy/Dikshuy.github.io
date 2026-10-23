@@ -11,8 +11,6 @@ I am a PhD student in the Computing Science department at the University of Albe
 
 My research focuses on the planning aspects of Laplacian Representations. Inspired by Marlos, I believe that Laplacian Representations hold the key to solving many open problems in reinforcement learning. In general, I am passionate about: *(Deep) Reinforcement Learning*, *Representation Learning*, *Continual Learning*, *Autonomous Driving*, and *Robotics*.
 
-When I am not doing research, I am usually playing soccer or badminton, or out bouldering — sports are my way of switching off.
-
 ---
 
 ## News
